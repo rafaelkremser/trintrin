@@ -9,6 +9,9 @@ vendor/
 # Ignorar arquivos de compilação (por exemplo, .class, .o)
 *.class
 *.o
+*.min.js
+*.css
+*.map
 
 # Ignorar arquivos de configuração sensíveis
 config.ini
