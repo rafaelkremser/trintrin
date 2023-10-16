@@ -1,0 +1,71 @@
+.bg-admin-login {
+    * {
+        font-family: 'Outfit', sans-serif;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $black;
+    height: 100vh;
+    width: 100vw;
+    img, svg {
+        position: absolute;
+        top: 3rem;
+        height: 3.6rem;
+        z-index: 1;
+    }
+    .admin-login-container {
+        background: #fff;
+        padding: 30px 40px;
+        z-index: 10000;
+        form {
+            h1 {
+                font-size: 2.4rem;
+                color: $red;
+                font-weight: 800;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .input-group {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+                label {
+                    color: $color;
+                    font-size: 1.2rem;
+                    margin-bottom: 2px;
+                }
+                input {
+                    height: 40px;
+                    width: 260px;
+                    border: 1px solid #333;
+                    padding-left: 10px;
+                    font-size: 1rem;
+                    transition: .25s;
+                    &::placeholder {
+                        font-size: 1rem;
+                    }
+                    &:focus {
+                        border: 1px solid $red;
+                        outline: 0;
+                    }
+                }
+            }
+            input[type="submit"] {
+                height: 42px;
+                width: 100%;
+                background: $red;
+                color: #fff;
+                font-size: 1.1rem;
+                font-weight: 500;
+                letter-spacing: .5px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .alerta {
+                color: #000;
+            }
+        }
+    }
+}
