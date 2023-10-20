@@ -14,8 +14,8 @@
                         <input type="text" name="nome_bicicleta" required>
                     </div>
                     <div class="w-20">
-                        <label><span>Data</span></label>
-                        <input type="date" name="data_bicicleta" required>
+                        <label><span>Preço</span></label>
+                        <input type="text" name="preco_bicicleta" placeholder="00.00" required>
                     </div>
                 </div>
                 <div class="row">

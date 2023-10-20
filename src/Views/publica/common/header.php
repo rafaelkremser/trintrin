@@ -4,6 +4,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
     <title>TrinTrin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="<?=URL_BASE?>resources/css/css.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +14,7 @@
 <body>
 	<header>
         <div class="container">
-            <a href="" class="logo">
+            <a href="<?=URL_BASE?>" class="logo">
                 <svg width="503.1000000000001" height="107.6362890907412" viewBox="0 0 302.8800070626395 64.8" class="css-1j8o68f">
                     <defs id="SvgjsDefs2280"></defs>
                     <g id="SvgjsG2281" featurekey="symbolFeature-0" transform="matrix(0.7495317205826912,0,0,0.7495317205826912,103.43537744041139,-315.3826954764759)" fill="#ffffff">
@@ -32,15 +33,13 @@
             </div>
             <nav class="">
                 <ul>
-                    <li><a class="hover-underline-animation" href="banner">Home</a></li>
+                    <li><a class="hover-underline-animation" href="<?=URL_BASE?>">Home</a></li>
                     <li><a class="hover-underline-animation" href="aboutus">Sobre nós</a></li>
-                    <li><a class="hover-underline-animation" href="products">Loja</a></li>
-                    <li><a class="hover-underline-animation" href="newsletter">Artigos</a></li>
-                    <li><a class="hover-underline-animation" href="contact-us">Contate-nos</a></li>
+                    <li><a class="hover-underline-animation" href="<?=URL_BASE?>bikes">Loja</a></li>
                 </ul>
                 <div class="btn-cadastrar">
                     <a class="cta" href="<?=URL_BASE?>cadastrar">
-                        <span class="hover-underline-animation"> Cadastrar </span>
+                        <span class="hover-underline-animation" style="color: #fff"> Cadastrar </span>
                         <img src="../../resources/imagens/svg/arrow-right.svg">
                     </a>
                 </div>

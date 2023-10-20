@@ -95,6 +95,7 @@ final class BicicletasController
         $emailUsuarioLogado = $_SESSION['usuario_logado']['email_usuario'];
         $idUsuarioLogado = $usuario->selectUsuario('id_usuario', array('email_usuario' => $emailUsuarioLogado));
         $nome_bicicleta = $request->getParsedBody()['nome_bicicleta'];
+        $preco_bicicleta = floatval($request->getParsedBody()['preco_bicicleta']);
         $data_bicicleta = $request->getParsedBody()['data_bicicleta'];
         $vendedor_bicicleta = $idUsuarioLogado[0]['id_usuario'];
         $descricao_bicicleta = $request->getParsedBody()['descricao_bicicleta'];
@@ -123,6 +124,7 @@ final class BicicletasController
 
         $campos = array(
             'nome_bicicleta' => $nome_bicicleta,
+            'preco_bicicleta' => $preco_bicicleta,
             'url_amigavel_bicicleta' => $this->gerarUrlAmigavel($nome_bicicleta),
             'vendedor_bicicleta' => $vendedor_bicicleta,
             'data_cadastro' => $data_bicicleta,
@@ -182,6 +184,7 @@ final class BicicletasController
 
         $id = $request->getParsedBody()['id_bicicleta'];
         $nome_bicicleta = $request->getParsedBody()['nome_bicicleta'];
+        $preco_bicicleta = floatval($request->getParsedBody()['preco_bicicleta']);
         $data_bicicleta = $request->getParsedBody()['data_bicicleta'];
         $descricao_bicicleta = $request->getParsedBody()['descricao_bicicleta'];
         $status_bicicleta = $request->getParsedBody()['ativo_bicicleta'];
@@ -217,6 +220,7 @@ final class BicicletasController
         $campos = array(
             'id_bicicleta' => $id,
             'nome_bicicleta' => $nome_bicicleta,
+            'preco_bicicleta' => $preco_bicicleta,
             'url_amigavel_bicicleta' => $this->gerarUrlAmigavel($nome_bicicleta),
             'data_cadastro' => $data_bicicleta,
             'descricao_bicicleta' => $descricao_bicicleta,
