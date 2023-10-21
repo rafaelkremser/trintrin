@@ -11,15 +11,15 @@ $(document).ready(function(){
     }
 
 
-    $('nav ul li a').on('click', function(e) {
-        e.preventDefault();
-        var id = $(this).attr('href'),
-        targetOffset = $('.'+id).offset().top;
+    // $('nav ul li a').on('click', function(e) {
+    //     e.preventDefault();
+    //     var id = $(this).attr('href'),
+    //     targetOffset = $('.'+id).offset().top;
 
-        $('html, body').animate({
-            scrollTop: targetOffset - 100
-        }, 500);
-    });
+    //     $('html, body').animate({
+    //         scrollTop: targetOffset - 100
+    //     }, 500);
+    // });
 
 
     $('body.admin header .container .left .bx-menu').on('click', function(){

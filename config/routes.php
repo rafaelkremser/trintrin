@@ -2,6 +2,10 @@
 use Slim\App;
 return function (App $app) {
     $app->get('/', '\App\Controller\HomeController:home');
+    $app->get('/aboutus', '\App\Controller\HomeController:aboutus');
+    $app->get('/bikes', '\App\Controller\HomeController:bikes');
+    $app->get('/bikes/{id}', '\App\Controller\HomeController:bikes_view');
+    $app->get('/bikes/payment/{id}', '\App\Controller\HomeController:bikes_payment');
 
     // Controlador Admin
     $app->get('/admin-login', '\App\Controller\AdminController:login');

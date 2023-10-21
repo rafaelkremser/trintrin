@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;900&family=Prompt:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;900&family=Prompt:wght@100&display=swap');
+
+#botao-cor {
+    width: 2.7vw;
+}
+
+#botao-cor1 {
+    display: none;
+    width: 2.7vw;
+}
+
+#area-botao-cor {
+    display: grid;
+    align-items: top;
+}
+
+#topoSite {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: top;
+    margin-top: 0.5vw;
+}
+
+#Pesquisa {
+    width: 70%;
+    height: 25%;
+    background-color: #fff;
+    border: none;
+    padding: 0.7vw 0 0.7vw 1vw;
+    border-radius: 12px;
+}
+
+#Pesquisa:focus, select:focus {
+    color: #b3b3b3;
+    border: none;
+}
+
+#Pesquisa::placeholder {
+    color: #b3b3b3;
+    font-family: 'Poppins', sans-serif;
+}
+
+#tituloSite {
+    margin-left: 2vw;
+    display: grid;
+    align-items: top;
+}
+
+#iconTrin {
+    width: 9vw;
+}
+
+#areaIcons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: top;
+}
+
+#iconLogin {
+    width: 1.7vw;
+}
+
+#iconCar {
+    width: 2.2vw;
+}
+
+/***********************************
+************************************
+*********** TELA SOBRE *************
+************************************
+***********************************/
+
+#areaTituloSobre {
+    grid-area: titulo;
+    text-align: center;
+}
+
+#areaImgSobre {
+    grid-area: imagem;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+#areaTextoSobre {
+    grid-area: texto;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-size: 1vw;
+}
+
+#conteudoSobre {
+    display: grid;
+    grid: "titulo titulo" 
+    "imagem texto" ;
+    margin-top: 2vw;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+#imgSobre {
+    width: 30vw;
+}
+
+#tituloSobre {
+    font-size: 2vw;
+    margin-bottom: 0;
+}
+
+#subTituloSobre {
+    margin-top: 0.3vw;
+    font-size: 1.2vw;
+}
+
+#tituloDesenvolvedor {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+#areaDesenvolvedores {
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+}
+
+#areaDevs {
+    display: grid;
+    grid: "1 1 1 1 1";
+}
+
+.areaImgDevs {
+    display: grid;
+    justify-items: center;
+}
+
+.imgDevs {
+    width: 13vw;
+    border-radius: 8px;
+}
+
+.nomeDev {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 0.9vw;
+}
+
+#tituloFale {
+    grid-area: tituloFale;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 1.2vw;
+    display: grid;
+    justify-content: center;
+}
+
+#formFale {
+    display: grid;
+    grid-area: formFale;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+#areaImgFale {
+    grid-area: imgFale;
+    display: grid;
+    justify-content: center;
+}
+
+#formFale input{
+    border: 2px solid #990D35;
+    border-radius: 5px;
+    padding: 0.8vw;
+    font-size: 0.7vw;
+    background-color: transparent;
+}
+
+#areaFaleConosco {
+    display: grid;
+    grid: "tituloFale tituloFale"
+    "formFale imgFale";
+    align-items: center;
+}
+
+#imgFale {
+    width: 25vw;
+}
+
+.inputFale {
+    width: 20vw;
+}
+
+#btnEnviar {
+    width: 15vw;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 900;
+}

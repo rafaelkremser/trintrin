@@ -32,6 +32,11 @@ class Bicicleta extends Model {
 		return $this->select($this->table, $campos, $where);
 	}
 
+	function selectAllBicicleta() {
+		$sql = "SELECT * FROM ".$this->table." ORDER BY id_bicicleta DESC";
+		return $this->querySelect($sql);
+	}
+
 	function getUltimoBicicleta() {
 		$sql = "SELECT * FROM ".$this->table." ORDER BY id_bicicleta DESC LIMIT 1";
 		return $this->querySelect($sql)[0];
