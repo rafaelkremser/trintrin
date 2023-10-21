@@ -7,6 +7,9 @@ use Psr\Http\Message\ServerRequestInterface;
 use Slim\Views\PhpRenderer;
 use App\Model\Bicicleta;
 use App\Model\Usuario;
+use App\Controller\Payload;
+use Mpdf\QrCode\QrCode;
+use Mpdf\QrCode\Output;
 
 final class HomeController
 {
@@ -17,6 +20,15 @@ final class HomeController
     ) {
         $renderer = new PhpRenderer(DIRETORIO_TEMPLATES);
         return $renderer->render($response, "home.php");
+    }
+    
+    public function aboutus(
+        ServerRequestInterface $request, 
+        ResponseInterface $response,
+        $args
+    ) {
+        $renderer = new PhpRenderer(DIRETORIO_TEMPLATES);
+        return $renderer->render($response, "aboutus.php");
     }
 
     public function bikes(
@@ -70,11 +82,31 @@ final class HomeController
         $usuario = new Usuario();
         $resultado = $bicicletas->selectBicicleta('*', array('id_bicicleta' => $id))[0];
 
+        // INSTANCIA PRINCIPAL DO PAYLOAD PIX
+        $obPayload = (new Payload)
+            ->setPixKey('16694782624')
+            ->setDescription($resultado['nome_bicicleta'])
+            ->setMerchantName('Rafael')
+            ->setMerchantCity('BELO HORIZONTE')
+            ->setTxid('Trintrin')
+            ->setAmount(strval($resultado['preco_bicicleta']));
+
+        // CODIGO DE PAGAMENTO PIX
+        $payloadQrCode = $obPayload->getPayload();
+        
+        // QR CODE
+        $obQrCode = new QrCode($payloadQrCode);
+
+        // IMAGEM DO QRCODE
+        $image = (new Output\Png)->output($obQrCode,400);
+
         $data['informacoes'] = array (
             'id_bicicleta' => $id,
-            'bicicleta' => $resultado
+            'bicicleta' => $resultado,
+            'payload' => $payloadQrCode,
+            'image' => $image
         );
-
+        
         $renderer = new PhpRenderer(DIRETORIO_TEMPLATES."/bikes/bikes_payment");
         return $renderer->render($response, "bikes_payment.php", $data);
     }

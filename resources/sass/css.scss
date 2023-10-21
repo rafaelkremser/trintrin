@@ -1,8 +1,8 @@
-/* Variaveis
--------------------------------------------------- */
+/* Variaveis -------------------------------------------------- */
+
 $color: #333;
 $red: #990D35;
-$red_hover: #b12f54; 
+$red_hover: #b12f54;
 $black: #2C2C2C;
 $black_dark: #1B1B1B;
 $letter_black: #ffffff65;
@@ -35,4 +35,7 @@ $line_height: 1.3;
 /* Páginas
 -------------------------------------------------- */
 @import "paginas/home";
+@import "paginas/aboutus";
+@import "paginas/bikes";
+@import "paginas/checkout";
 @import "paginas/admin_login";

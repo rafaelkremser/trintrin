@@ -4,15 +4,31 @@
       <div class="container">
         <div class="row gutter-2 gutter-md-4 justify-content-between">
 
-          <div class="col-lg-7">
+        <div class="col-lg-7">
             <div class="row gutter-1 justify-content-between">
+              <div class="col-lg-10 order-lg-2">
+                <div class="owl-carousel gallery" data-slider-id="1" data-thumbs="true" data-nav="true">
+                  <figure class="equal">
+                    <a class="image" href="<?=URL_BASE.$data['informacoes']['bicicleta']['imagem_principal_bicicleta']?>" 
+                      style="background-image: url(<?=URL_BASE.$data['informacoes']['bicicleta']['imagem_principal_bicicleta']?>);">
+                    </a>
+                  </figure>
+                </div>
+              </div>
               <div class="col-lg-2 text-center text-lg-left order-lg-1">
                 <div class="owl-thumbs" data-slider-id="1">
-                    <span class="owl-thumb-item"><img src="<?=URL_BASE.$data['informacoes']['bicicleta']['imagem_principal_bicicleta']?>" alt=""></span>
+                <div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">  
+    <span class="owl-thumb-item"><img src="<?=URL_BASE.$data['informacoes']['bicicleta']['imagem_principal_bicicleta']?>" class="img-responsive img-600-600" alt=""></span>
+    </a>
+  </div>
+</div>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="col-lg-5 mb-5 mb-lg-0">
             <div class="row">
               <div class="col-12">
